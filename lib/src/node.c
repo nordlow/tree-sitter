@@ -25,6 +25,7 @@ TSNode ts_node_new(
     subtree,
     tree,
     0,                          /* hash */
+    false,                      /* hashInProgress */
   };
 }
 

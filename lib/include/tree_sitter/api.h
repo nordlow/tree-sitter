@@ -100,7 +100,8 @@ typedef struct TSNode {
   uint32_t context[4];
   const void *id;
   const TSTree *tree;
-  uint64_t hash;                /* NOTE: Added in nordlow/tree-sitter */
+  uint64_t hash : 63;      /* NOTE: Added in nordlow/tree-sitter */
+  bool hashInProgress : 1; /* NOTE: Computation of `hash` is in progress. */
 } TSNode;
 
 typedef struct TSTreeCursor {
