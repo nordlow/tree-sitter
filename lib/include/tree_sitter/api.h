@@ -125,6 +125,8 @@ typedef struct TSNode {
   uint32_t context[4];
   const void *id;
   const TSTree *tree;
+  uint64_t _cachedTreeHash:63; /* NOTE: Added in nordlow/tree-sitter */
+  bool _cachedTreeHashInProgress:1; /* NOTE: Added in nordlow/tree-sitter */
 } TSNode;
 
 typedef struct TSTreeCursor {
