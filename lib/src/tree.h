@@ -2,6 +2,7 @@
 #define TREE_SITTER_TREE_H_
 
 #include "./subtree.h"
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
