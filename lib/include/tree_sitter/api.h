@@ -100,6 +100,7 @@ typedef struct TSNode {
   uint32_t context[4];
   const void *id;
   const TSTree *tree;
+  uint64_t hash;                /* NOTE: Added in nordlow/tree-sitter */
 } TSNode;
 
 typedef struct TSTreeCursor {

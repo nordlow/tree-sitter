@@ -1,4 +1,5 @@
 #include <stdbool.h>
+#include <stdint.h>
 #include "./subtree.h"
 #include "./tree.h"
 #include "./language.h"
@@ -24,6 +25,7 @@ TSNode ts_node_new(
     {position.bytes, position.extent.row, position.extent.column, alias},
     subtree,
     tree,
+    0,                          /* hash */
   };
 }
 
