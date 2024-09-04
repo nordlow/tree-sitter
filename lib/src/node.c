@@ -27,7 +27,8 @@ TSNode ts_node_new(
     {position.bytes, position.extent.row, position.extent.column, alias},
     subtree,
     tree,
-    0,                          /* hash */
+    0,                          /* _cachedTreeHash */
+    false,                      /* _cachedTreeHashInProgress */
   };
 }
 
