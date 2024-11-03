@@ -19,6 +19,8 @@ struct TSTree {
   const TSLanguage *language;
   TSRange *included_ranges;
   unsigned included_range_count;
+  size_t _src_len;              /* NOTE: Added in nordlow/tree-sitter */
+  char* _src_ptr;               /* NOTE: Added in nordlow/tree-sitter */
 };
 
 TSTree *ts_tree_new(Subtree root, const TSLanguage *language, const TSRange *included_ranges, unsigned included_range_count);

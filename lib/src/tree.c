@@ -16,6 +16,8 @@ TSTree *ts_tree_new(
   result->included_ranges = ts_calloc(included_range_count, sizeof(TSRange));
   memcpy(result->included_ranges, included_ranges, included_range_count * sizeof(TSRange));
   result->included_range_count = included_range_count;
+  result->_src_len = 0;
+  result->_src_ptr = NULL;
   return result;
 }
 
